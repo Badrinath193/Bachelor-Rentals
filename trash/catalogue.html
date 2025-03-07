@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/test1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+    rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .c1:hover {
+            box-shadow: 0px 8px 9px 0px rgba(0, 0, 0, 0.2);
+            transform: scale(1.01);
+        }
+        .c1{
+            min-height: 500px;
+            transition: transform 0.2s;
+        }
+        .ct{
+            min-height: 140px;
+        }
+        .card-img-top{
+            height: 400px;
+            width: auto;
+            object-fit: cover;
+        }
+        .card-body{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+    
+          <div class="overlay"></div>
+    
+            Bachelor Rentals
+    
+          <nav class="navbar" data-navbar>
+            <ul class="navbar-list">
+    
+              <li>
+                <a href="#home" class="navbar-link" data-nav-link>Home</a>
+              </li>
+    
+              <li>
+                <a href="#featured-car" class="navbar-link" data-nav-link>Explore cars</a>
+              </li>
+    
+              <li>
+                <a href="#" class="navbar-link" data-nav-link>About us</a>
+              </li>
+    
+              <li>
+                <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+              </li>
+    
+            </ul>
+          </nav>
+    
+          <div class="signupbt">
+            <button id="openbtn">Login</button>
+          </div>
+    
+          <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModalBtn">&times;</span>
+    
+                <div class="container3">
+                    <h2 id="formTitle">Sign Up</h2>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="form-group" id="confirmPasswordGroup" style="display: none;">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" placeholder="Confirm your password">
+                    </div>
+                    <p id="message" class="error"></p>
+                    <button id="actionBtn">Sign Up</button>
+                    <button class="switch-btn" id="switchBtn">Switch to Login</button>
+                </div>
+            
+            </div>
+        </div>
+    
+        </div>
+      </header>
+    <!--Add the header from the main page, change the rates-->
+  
+
+    <section class="jumbotron text-center bg-white">
+        <div class="container">
+          <h1 class="jumbotron-heading">Car Rentals</h1><br>
+          <p class="lead text-muted">Discover seamless travel with our top-tier car rental service. Whether it’s a business trip or a leisurely drive, we’ve got you covered with reliable vehicles and exceptional service to make your journey unforgettable.</p>
+        </div>
+      </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card c1 mb-4 box-shadow">
+
+                        <!--images are in 3:2 aspect and find stock photos, cause these are shit AND the photos don't match the car names-->
+
+                        <img class="card-img-top" src="asserts/car/car1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="lead">Toyota RAV4</p>
+                            <p class="card-text ct">The Toyota RAV4 offers a fuel-efficient engine, spacious interior, advanced safety features, and modern tech like Apple CarPlay. It's the perfect blend of reliability, comfort, and performance for any journey.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">$400/week</small>
+                                <small class="text-muted">10-04-24</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card c1 mb-4 box-shadow">
+                        <img class="card-img-top" src="asserts/car/car2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="lead">BMW 3 Series</p>
+                            <p class="card-text ct">The BMW 3 Series offers powerful engines, sharp handling, a luxurious interior, advanced tech, and top-tier safety features, delivering a perfect balance of performance and sophistication for driving enthusiasts.</p>
+                            <div class="d-flex justify-content-between align-items-bottom">
+                                <small class="text-muted">$900/week</small>
+                                <small class="text-muted">20-09-24</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card c1 mb-4 box-shadow">
+                        <img class="card-img-top" src="asserts/car/car3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="lead">Volkswagen T-Cross</p>
+                            <p class="card-text ct">The Volkswagen T-Cross is a compact SUV with a stylish design, efficient engines, spacious interior, advanced safety features, and modern tech, offering a versatile and comfortable driving experience.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">$300/week</small>
+                                <small class="text-muted">30-08-24</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card c1 mb-4 box-shadow">
+                        <img class="card-img-top" src="asserts/car/car4.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="lead">Tata Harrier</p>
+                            <p class="card-text ct">The Tata Harrier is a luxury SUV featuring a bold design, powerful V8 engine, spacious interior, advanced technology, and premium comfort, offering a top-tier driving experience with exceptional performance and style.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">$350/week</small>
+                                <small class="text-muted">21-07-24</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card c1 mb-4 box-shadow">
+                        <img class="card-img-top" src="asserts/car/car5.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="lead">Ford Ecosport</p>
+                            <p class="card-text ct">The Ford EcoSport is a compact SUV offering nimble handling, efficient engines, a high seating position, modern infotainment features, and versatile cargo space, making it ideal for urban driving and weekend adventures.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">$600/week</small>
+                                <small class="text-muted">10-02-24</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card c1 mb-4 box-shadow">
+                        <img class="card-img-top" src="asserts/car/car6.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="lead">Mini Cooer S</p>
+                            <p class="card-text ct">
+                                The Mini Cooper S combines iconic styling with sporty performance, featuring a turbocharged engine, agile handling, premium interior, and advanced technology, delivering a fun and engaging driving experience in a compact package.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">$450/week</small>
+                                <small class="text-muted">08-09-24</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card c1 mb-4 box-shadow">
+                        <img class="card-img-top" src="asserts/car/car1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="lead">Toyota RAV4</p>
+                            <p class="card-text ct">The Toyota RAV4 offers a fuel-efficient engine, spacious interior, advanced safety features, and modern tech like Apple CarPlay. It's the perfect blend of reliability, comfort, and performance for any journey.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">$400/week</small>
+                                <small class="text-muted">10-04-24</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card c1 mb-4">
+                        <img class="card-img-top" src="asserts/car/car1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="lead">Toyota RAV4</p>
+                            <p class="card-text ct">The Toyota RAV4 offers a fuel-efficient engine, spacious interior, advanced safety features, and modern tech like Apple CarPlay. It's the perfect blend of reliability, comfort, and performance for any journey.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">$400/week</small>
+                                <small class="text-muted">10-04-24</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card c1 mb-4 box-shadow">
+                        <img class="card-img-top" src="asserts/car/car1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="lead">Toyota RAV4</p>
+                            <p class="card-text ct">The Toyota RAV4 offers a fuel-efficient engine, spacious interior, advanced safety features, and modern tech like Apple CarPlay. It's the perfect blend of reliability, comfort, and performance for any journey.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">$400/week</small>
+                                <small class="text-muted">10-04-24</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

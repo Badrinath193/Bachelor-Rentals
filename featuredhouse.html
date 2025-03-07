@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <div class="container">
+
+      <div class="overlay"></div>
+
+        Bachelor Rentals
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="main.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="#featured-car" class="navbar-link" data-nav-link>Explore cars</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>About us</a>
+          </li>
+
+          <li>
+            <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="signupbt">
+        <button id="openbtn">Login</button>
+      </div>
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+
+            <div class="container3">
+                <h2 id="formTitle">Sign Up</h2>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                <div class="form-group" id="confirmPasswordGroup" style="display: none;">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password">
+                </div>
+                <p id="message" class="error"></p>
+                <button id="actionBtn">Sign Up</button>
+                <button class="switch-btn" id="switchBtn">Switch to Login</button>
+            </div>
+        
+        </div>
+    </div>
+
+    </div>
+  </header>
+    <section class="section featured-car" id="featured-car">
+        <div class="container">
+          <br>
+          <ul class="featured-car-list">
+            
+            <li>
+              <div class="featured-car-card">
+
+                <figure class="card-banner">
+                  <img src="asserts/house/house1.jpg" alt="house1" loading="lazy" width="440" height="300"
+                    class="w-100">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">House 1</a>
+                    </h3>
+
+                    <data class="year" value="2021">1998</data>
+                  </div>
+
+                  <ul class="card-list">
+
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">3 Bed Room</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">contact no:99999999999</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">10$ /day</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">5 acer</span>
+                    </li>
+
+                  </ul>
+
+                  <div class="card-price-wrapper">
+
+                    <p class="card-price">
+                      <strong>$440</strong> / month
+                    </p>
+                    <button class="btn">Rent now</button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+                <div class="featured-car-card">
+  
+                  <figure class="card-banner">
+                    <img src="asserts/house/house2.jpg" alt="house1" loading="lazy" width="440" height="300"
+                      class="w-100">
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <div class="card-title-wrapper">
+                      <h3 class="h3 card-title">
+                        <a href="#">House 2</a>
+                      </h3>
+  
+                      <data class="year" value="2021">1998</data>
+                    </div>
+  
+                    <ul class="card-list">
+  
+                      <li class="card-list-item">
+                        <ion-icon name="people-outline"></ion-icon>
+  
+                        <span class="card-item-text">3 Bed Room</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="flash-outline"></ion-icon>
+  
+                        <span class="card-item-text">contact no:99999999999</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="speedometer-outline"></ion-icon>
+  
+                        <span class="card-item-text">10$ /day</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="hardware-chip-outline"></ion-icon>
+  
+                        <span class="card-item-text">5 acer</span>
+                      </li>
+  
+                    </ul>
+  
+                    <div class="card-price-wrapper">
+  
+                      <p class="card-price">
+                        <strong>$440</strong> / month
+                      </p>
+                      <button class="btn">Rent now</button>
+  
+                    </div>
+  
+                  </div>
+  
+                </div>
+            </li>
+
+            <li>
+                <div class="featured-car-card">
+  
+                  <figure class="card-banner">
+                    <img src="asserts/house/house3.jpg" alt="house1" loading="lazy" width="440" height="300"
+                      class="w-100">
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <div class="card-title-wrapper">
+                      <h3 class="h3 card-title">
+                        <a href="#">House 3</a>
+                      </h3>
+  
+                      <data class="year" value="2021">1998</data>
+                    </div>
+  
+                    <ul class="card-list">
+  
+                      <li class="card-list-item">
+                        <ion-icon name="people-outline"></ion-icon>
+  
+                        <span class="card-item-text">3 Bed Room</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="flash-outline"></ion-icon>
+  
+                        <span class="card-item-text">contact no:99999999999</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="speedometer-outline"></ion-icon>
+  
+                        <span class="card-item-text">10$ /day</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="hardware-chip-outline"></ion-icon>
+  
+                        <span class="card-item-text">5 acer</span>
+                      </li>
+  
+                    </ul>
+  
+                    <div class="card-price-wrapper">
+  
+                      <p class="card-price">
+                        <strong>$440</strong> / month
+                      </p>
+                      <button class="btn">Rent now</button>
+  
+                    </div>
+  
+                  </div>
+  
+                </div>
+            </li>
+
+            <li>
+                <div class="featured-car-card">
+  
+                  <figure class="card-banner">
+                    <img src="asserts/house/house4.jpg" alt="house1" loading="lazy" width="440" height="300"
+                      class="w-100">
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <div class="card-title-wrapper">
+                      <h3 class="h3 card-title">
+                        <a href="#">House 4</a>
+                      </h3>
+  
+                      <data class="year" value="2021">1998</data>
+                    </div>
+  
+                    <ul class="card-list">
+  
+                      <li class="card-list-item">
+                        <ion-icon name="people-outline"></ion-icon>
+  
+                        <span class="card-item-text">3 Bed Room</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="flash-outline"></ion-icon>
+  
+                        <span class="card-item-text">contact no:99999999999</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="speedometer-outline"></ion-icon>
+  
+                        <span class="card-item-text">10$ /day</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="hardware-chip-outline"></ion-icon>
+  
+                        <span class="card-item-text">5 acer</span>
+                      </li>
+  
+                    </ul>
+  
+                    <div class="card-price-wrapper">
+  
+                      <p class="card-price">
+                        <strong>$440</strong> / month
+                      </p>
+                      <button class="btn">Rent now</button>
+  
+                    </div>
+  
+                  </div>
+  
+                </div>
+              </li>
+
+              <li>
+                <div class="featured-car-card">
+  
+                  <figure class="card-banner">
+                    <img src="asserts/house/house5.jpg" alt="house1" loading="lazy" width="440" height="300"
+                      class="w-100">
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <div class="card-title-wrapper">
+                      <h3 class="h3 card-title">
+                        <a href="#">House 5</a>
+                      </h3>
+  
+                      <data class="year" value="2021">1998</data>
+                    </div>
+  
+                    <ul class="card-list">
+  
+                      <li class="card-list-item">
+                        <ion-icon name="people-outline"></ion-icon>
+  
+                        <span class="card-item-text">3 Bed Room</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="flash-outline"></ion-icon>
+  
+                        <span class="card-item-text">contact no:99999999999</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="speedometer-outline"></ion-icon>
+  
+                        <span class="card-item-text">10$ /day</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="hardware-chip-outline"></ion-icon>
+  
+                        <span class="card-item-text">5 acer</span>
+                      </li>
+  
+                    </ul>
+  
+                    <div class="card-price-wrapper">
+  
+                      <p class="card-price">
+                        <strong>$440</strong> / month
+                      </p>
+                      <button class="btn">Rent now</button>
+  
+                    </div>
+  
+                  </div>
+  
+                </div>
+              </li>
+
+              <li>
+                <div class="featured-car-card">
+  
+                  <figure class="card-banner">
+                    <img src="asserts/house/house6.jpg" alt="house1" loading="lazy" width="440" height="300"
+                      class="w-100">
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <div class="card-title-wrapper">
+                      <h3 class="h3 card-title">
+                        <a href="#">House 6</a>
+                      </h3>
+  
+                      <data class="year" value="2021">1978</data>
+                    </div>
+  
+                    <ul class="card-list">
+  
+                      <li class="card-list-item">
+                        <ion-icon name="people-outline"></ion-icon>
+  
+                        <span class="card-item-text">3 Bed Room</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="flash-outline"></ion-icon>
+  
+                        <span class="card-item-text">contact no:99999999999</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="speedometer-outline"></ion-icon>
+  
+                        <span class="card-item-text">10$ /day</span>
+                      </li>
+  
+                      <li class="card-list-item">
+                        <ion-icon name="hardware-chip-outline"></ion-icon>
+  
+                        <span class="card-item-text">5 acer</span>
+                      </li>
+  
+                    </ul>
+  
+                    <div class="card-price-wrapper">
+  
+                      <p class="card-price">
+                        <strong>$440</strong> / month
+                      </p>
+                      <button class="btn">Rent now</button>
+  
+                    </div>
+  
+                  </div>
+  
+                </div>
+              </li>
+
+          </ul>
+
+        </div>
+      </section>
+</body>
+</html>
