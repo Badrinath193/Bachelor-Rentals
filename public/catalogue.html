@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bachelor Rentals | Catalogue</title>
+    <style>
+      body { font-family: Inter, Arial, sans-serif; background:#020617; color:#e2e8f0; margin:0; }
+      .wrap{max-width:1100px;margin:0 auto;padding:32px 16px}
+      .glass{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);backdrop-filter: blur(8px);border-radius:16px;padding:20px}
+      .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:16px}
+      .card{background:rgba(15,23,42,.8);border-radius:14px;padding:12px;border:1px solid rgba(255,255,255,.12)}
+      .card img{width:100%;height:150px;object-fit:cover;border-radius:10px}
+      a.btn{display:inline-block;padding:10px 14px;background:#06b6d4;color:#082f49;text-decoration:none;border-radius:10px;font-weight:700}
+      .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="glass">
+        <div class="top">
+          <h1>Catalogue</h1>
+          <a class="btn" href="./">Back to Home</a>
+        </div>
+        <p>Explore featured electronics and electric mobility inventory.</p>
+        <div class="grid">
+          <article class="card"><img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?auto=format&fit=crop&w=1000&q=80" alt="Laptop"><h3>MacBook Pro M3</h3><p>Rent from $45/day · Buy $2199</p></article>
+          <article class="card"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1000&q=80" alt="Camera"><h3>Sony A7 IV</h3><p>Rent from $38/day · Buy $1899</p></article>
+          <article class="card"><img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=1000&q=80" alt="Tesla"><h3>Tesla Model 3</h3><p>Rent from $110/day · Buy $38999</p></article>
+          <article class="card"><img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=1000&q=80" alt="Ebike"><h3>Turbo Vado E-Bike</h3><p>Rent from $21/day · Buy $3299</p></article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
