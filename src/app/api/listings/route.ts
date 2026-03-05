@@ -8,7 +8,8 @@ const createSchema = z.object({
   description: z.string().min(10),
   category: z.string(),
   imageUrl: z.string().min(1),
-  pricePerDay: z.number().positive()
+  pricePerDay: z.number().positive(),
+  sellPrice: z.number().positive()
 });
 
 export async function GET(request: NextRequest) {

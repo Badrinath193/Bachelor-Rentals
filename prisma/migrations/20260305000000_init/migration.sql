@@ -21,6 +21,7 @@ CREATE TABLE "Listing" (
   "category" TEXT NOT NULL,
   "imageUrl" TEXT NOT NULL,
   "pricePerDay" DECIMAL(10,2) NOT NULL,
+  "sellPrice" DECIMAL(10,2) NOT NULL,
   "isAvailable" BOOLEAN NOT NULL DEFAULT true,
   "ownerId" TEXT NOT NULL,
   "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,

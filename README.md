@@ -8,6 +8,8 @@ Full-stack rental marketplace built with Next.js 14 App Router, TypeScript, Tail
 - NextAuth Credentials + RBAC (Guest/Member/Admin)
 - Stripe Connect (application fee + seller transfer)
 - GSAP (hero sequence, stagger card entry, Flip page transitions)
+- Multi-section marketplace experience with **Electronics** and **Electric Mobility** catalogs
+- Dynamic pricing toggle for **Rent vs Buy** with day-based rental recalculation
 - Zustand cart, react-hot-toast notifications, skeleton loading components
 
 ## Required environment variables

@@ -33,8 +33,9 @@ export default async function ListingDetails({ params }: { params: { id: string 
         <img src={listing.imageUrl} alt={listing.title} className="h-72 w-full rounded-xl object-cover" />
         <h1 className="mt-5 text-3xl font-bold">{listing.title}</h1>
         <p className="mt-2 text-slate-300">{listing.description}</p>
-        <p className="mt-4 text-cyan-300">${Number(listing.pricePerDay)}/day</p>
-        <p className="mt-2 text-sm text-slate-400">Estimated for 3 days: ${estimate}</p>
+        <p className="mt-4 text-cyan-300">Rent: ${Number(listing.pricePerDay)}/day</p>
+        <p className="mt-1 text-emerald-300">Buy: ${Number((listing as any).sellPrice ?? listing.pricePerDay).toFixed(2)}</p>
+        <p className="mt-2 text-sm text-slate-400">Estimated rental for 3 days: ${estimate}</p>
       </article>
     </main>
   );

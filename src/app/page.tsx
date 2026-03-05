@@ -13,7 +13,9 @@ export default async function HomePage() {
         category: item.category,
         description: item.description,
         imageUrl: item.imageUrl,
-        pricePerDay: Number(item.pricePerDay)
+        pricePerDay: Number(item.pricePerDay),
+        sellPrice: Number((item as any).sellPrice ?? item.pricePerDay),
+        section: item.category.includes("electric") ? "Electric Mobility" : "Electronics"
       }))
     )
     .catch(() => fallbackListings);
