@@ -38,3 +38,11 @@ npm run dev
 - `src/lib`: Prisma, Stripe, RBAC, Zustand, utility logic
 - `src/types`: shared TS declarations
 - `prisma`: schema and SQL migration
+
+
+## GitHub Pages hosting
+1. In your GitHub repo, enable **Settings → Pages → Build and deployment → GitHub Actions**.
+2. Push to `main` (or run the workflow manually) to trigger `.github/workflows/deploy-pages.yml`.
+3. The workflow builds a static export (`out/`) using fallback marketplace data and deploys it to GitHub Pages.
+
+> Note: GitHub Pages only supports static hosting. API routes, Prisma, NextAuth, and Stripe webhooks are disabled in the Pages build and remain available only in full server deployments.

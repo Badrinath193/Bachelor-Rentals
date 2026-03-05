@@ -3,9 +3,20 @@ import { ListingGrid } from "@/components/listing-grid";
 import { prisma } from "@/lib/prisma";
 import { fallbackListings } from "@/lib/mock-data";
 
+const isStaticExport = process.env.NEXT_PUBLIC_STATIC_EXPORT === "true";
+
 export default async function HomePage() {
+  if (isStaticExport) {
+    return (
+      <main className="p-6">
+        <Hero />
+        <ListingGrid listings={fallbackListings} />
+      </main>
+    );
+  }
+
   const listings = await prisma.listing
-    .findMany({ take: 9, orderBy: { createdAt: "desc" } })
+    .findMany({ take: 30, orderBy: { createdAt: "desc" } })
     .then((items) =>
       items.map((item) => ({
         id: item.id,

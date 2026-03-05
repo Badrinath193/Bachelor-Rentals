@@ -1,10 +1,23 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
+import { fallbackListings } from "@/lib/mock-data";
 import { calculateRentalPrice } from "@/lib/utils";
 
+const isStaticExport = process.env.NEXT_PUBLIC_STATIC_EXPORT === "true";
+
+export async function generateStaticParams() {
+  if (isStaticExport) {
+    return fallbackListings.map((listing) => ({ id: listing.id }));
+  }
+  return [];
+}
+
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const listing = await prisma.listing.findUnique({ where: { id: params.id } }).catch(() => null);
+  const listing = isStaticExport
+    ? fallbackListings.find((item) => item.id === params.id) ?? null
+    : await prisma.listing.findUnique({ where: { id: params.id } }).catch(() => null);
+
   if (!listing) {
     return { title: "Listing Not Found | Bachelor Rentals" };
   }
@@ -21,7 +34,9 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 }
 
 export default async function ListingDetails({ params }: { params: { id: string } }) {
-  const listing = await prisma.listing.findUnique({ where: { id: params.id } }).catch(() => null);
+  const listing = isStaticExport
+    ? fallbackListings.find((item) => item.id === params.id) ?? null
+    : await prisma.listing.findUnique({ where: { id: params.id } }).catch(() => null);
 
   if (!listing) notFound();
 
