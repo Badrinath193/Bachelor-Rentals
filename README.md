@@ -1,1 +1,48 @@
-# BACHELOR_RENTALS
+# Bachelor Rentals (Next.js Full-Stack)
+
+Full-stack rental marketplace built with Next.js 14 App Router, TypeScript, Tailwind CSS, GSAP, Prisma, PostgreSQL, NextAuth RBAC, Stripe Connect checkout, and Zustand cart state.
+
+## Stack
+- Next.js 14 + TypeScript + Tailwind CSS
+- Prisma ORM + PostgreSQL
+- NextAuth Credentials + RBAC (Guest/Member/Admin)
+- Stripe Connect (application fee + seller transfer)
+- GSAP (hero sequence, stagger card entry, Flip page transitions)
+- Multi-section marketplace experience with **Electronics** and **Electric Mobility** catalogs
+- Dynamic pricing toggle for **Rent vs Buy** with day-based rental recalculation
+- Zustand cart, react-hot-toast notifications, skeleton loading components
+
+## Required environment variables
+Create `.env` with:
+
+```bash
+DATABASE_URL="postgresql://..."
+NEXTAUTH_SECRET="..."
+NEXTAUTH_URL="http://localhost:3000"
+NEXT_PUBLIC_APP_URL="http://localhost:3000"
+STRIPE_SECRET_KEY="sk_test_..."
+STRIPE_WEBHOOK_SECRET="whsec_..."
+PLATFORM_FEE_PERCENT="10"
+```
+
+## Run
+```bash
+npm install
+npx prisma generate
+npm run dev
+```
+
+## Structure
+- `src/app`: app router pages + API routes
+- `src/components`: UI and GSAP client components
+- `src/lib`: Prisma, Stripe, RBAC, Zustand, utility logic
+- `src/types`: shared TS declarations
+- `prisma`: schema and SQL migration
+
+
+## GitHub Pages hosting
+1. In your GitHub repo, enable **Settings → Pages → Build and deployment → GitHub Actions**.
+2. Push to `main` (or run the workflow manually) to trigger `.github/workflows/deploy-pages.yml`.
+3. The workflow builds a static export (`out/`) using fallback marketplace data and deploys it to GitHub Pages.
+
+> Note: GitHub Pages only supports static hosting. API routes, Prisma, NextAuth, and Stripe webhooks are disabled in the Pages build and remain available only in full server deployments.
